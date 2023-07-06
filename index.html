@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icon/favicon-16x16.png">
+</head>
+
+<body class="main-content">
+    <main class="main">
+        <header class="header">
+            <a href="" class="logo">CodingIn.</a>
+            <nav class="navbar">
+                <a href="#home" class="active">Beranda</a>
+                <a href="#about">Tentang</a>
+                <a href="#">Contact</a>
+            </nav>
+        </header>
+
+        <div class="container-home">
+            <section class="quiz-section">
+                <div class="quiz-box">
+                    <h1>CodingIn Quiz</h1>
+                    <div class="quiz-header">
+                        <span>Quiz Website by CodingIn</span>
+                        <span class="header-score"></span>
+                    </div>
+
+                    <h2 class="question-text"></h2>
+                    <div class="option-list"></div>
+
+                    <div class="quiz-footer">
+                        <span class="question-total">1 dari 5 Pertanyaan</span>
+                        <button class="next-btn" onclick="nextQuestion()">Selanjutnya</button>
+                    </div>
+                </div>
+
+                <div class="result-box">
+                    <h2>Hasil Quiz!</h2>
+                    <div class="percentage-container">
+                        <div class="circular-progress">
+                            <span class="progress-value">0%</span>
+                        </div>
+
+                        <span class="score-text"></span>
+                    </div>
+
+                    <div class="result-buttons">
+                        <button class="tryAgain-btn" onclick="tryAgain()">Coba Lagi</button>
+                        <button class="goHome-btn" onclick="goHome()">Kembali Beranda</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="home section" id="home">
+                <div class="home-content">
+                    <h1>Quiz Website</h1>
+                    <p>Website Quiz Programming yang berisi beberapa pertanyaan yang dapat menguji pemahaman
+                        serta sebagai latihan pengetahuan dasar-dasar programming anda </p>
+                    <button class="start-btn" onclick="showGuide()">Mulai Quiz</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="popup-info">
+        <h2>Aturan Quiz</h2>
+        <span class="info">1. Lorem ipsum dolor sit amet consectetur adipisicing.</span>
+        <span class="info">2. Lorem ipsum dolor sit amet.</span>
+        <span class="info">3. Lorem, ipsum dolor sit amet consectetur adipisicing elit?</span>
+        <span class="info">4. Lorem ipsum dolor sit amet consectetur.</span>
+        <span class="info">5. Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+
+        <div class="btn-group">
+            <button class="info-btn exit-btn" onclick="exitGuide()">Keluar Quiz</button>
+            <a href="#" class="info-btn continue-btn" onclick="showQuiz()">Lanjutkan!</a>
+        </div>
+    </div>
+
+    <div class="container-about">
+        <section class="about section" id="about">
+            <div class="row">
+                <h1>Tim Kami</h1>
+            </div>
+            <div class="row">
+                <!-- Col 1 -->
+                <div class="col">
+                    <div class="card">
+                        <div class="img-container">
+                            <img src="./assets/img/raisul-img.jpg" alt="">
+                        </div>
+                        <h3>Raisul Amin R</h3>
+                        <p>220280042</p>
+                        <div class="icons">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                            <a href="#"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Col 2 -->
+                <div class="col">
+                    <div class="card">
+                        <div class="img-container">
+                            <img src="./assets/img/ekam-img.jpg" alt="">
+                        </div>
+                        <h3>Eka Mulfiani</h3>
+                        <p>220280053</p>
+                        <div class="icons">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                            <a href="#"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Col 3 -->
+                <div class="col">
+                    <div class="card">
+                        <div class="img-container">
+                            <img src="./assets/img/rafly-img.jpg" alt="">
+                        </div>
+                        <h3>Muhammad Rafly</h3>
+                        <p>220280064</p>
+                        <div class="icons">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                            <a href="#"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="assets/js/questions.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
